@@ -42,7 +42,7 @@ export default class BudgetPage extends Component{
 
   renderItems=(categoryId)=>{
     
-    let items = budget_items.map((item,index)=>{
+    let items = budget_items.map((item,index) => {
       if(item.category_id===categoryId){
         return(
           <tr key={index}>
@@ -50,14 +50,14 @@ export default class BudgetPage extends Component{
               <td>{item.budgeted_amt.toFixed(2)}</td>
               <td>{item.spent_amt.toFixed(2)}</td>
           </tr>          
-        )
+        );
       }
-    })
+    });
 
-    return items
+    return items;
   }
 
-  onAddCategoryFormSubmit=(ev)=>{
+  onAddCategoryFormSubmit=(ev) => {
     ev.preventDefault()
     console.log(ev.target.categoryName.value)
 
@@ -71,7 +71,7 @@ export default class BudgetPage extends Component{
   renderTotalBudget=()=>{
     let totalBudget=0
     let totalSpent=0
-    budget_items.map(item=>{
+    budget_items.map(item => {
       totalBudget=totalBudget+item.budgeted_amt
       totalSpent=totalSpent+item.spent_amt
     })
