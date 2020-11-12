@@ -1,9 +1,9 @@
 import React, {Component} from 'react'
-import { Route, Switch} from 'react-router-dom'
+import { Route, Switch, withRouter} from 'react-router-dom'
 import './App.css'
 import BudgetPage from '../../routes/BudgetPage/BudgetPage'
 
-export default class App extends Component{
+class App extends Component{
 
   render(){
     return (
@@ -20,7 +20,9 @@ export default class App extends Component{
         <p>Created by Jessica Yip</p>
       </footer>
       </>
-    )
+    );
   }
   
 }
+
+export default withRouter (App);

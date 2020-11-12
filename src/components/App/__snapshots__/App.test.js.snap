@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should match with snapshot 1`] = `
+Array [
+  <nav>
+    <h1>
+      Trip Planning App
+    </h1>
+  </nav>,
+  <main />,
+  <footer>
+    <p>
+      Created by Jessica Yip
+    </p>
+  </footer>,
+]
+`;
